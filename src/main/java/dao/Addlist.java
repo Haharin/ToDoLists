@@ -13,6 +13,7 @@ import java.util.Set;
 public class Addlist {
     private Long addId;
     private Mainlist mainlist;
+    private Long mainlistId;
     private String addName;
     private String addDescription;
 
@@ -42,8 +43,15 @@ public class Addlist {
         return mainlist;
     }
 
-    public void setMainlist(Mainlist mainlist) {
-        this.mainlist = mainlist;
+    public void setMainlist(Mainlist mainlist) {this.mainlist = mainlist;}
+
+    @Transient
+    public Long getMainlistId() {
+        return mainlistId;
+    }
+
+    public void setMainlistId(Long mainlist) {
+        this.mainlistId =mainlist;
     }
 
     @Column(name = "ADD_NAME", length = 32, nullable = false, unique = false)

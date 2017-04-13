@@ -9,4 +9,5 @@ public interface MainlistDao {
 
     List<Mainlist> findAll();
 
+    Mainlist findById(Long MainlistId);
 }
